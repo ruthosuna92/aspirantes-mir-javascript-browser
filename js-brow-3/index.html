@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <p>
+            <label for="name">Ingresa tu nombre</label>
+            <input type="text" id="name" name="name" placeholder="Ingresa tu nombre">
+        </p>
+        <p>
+            <label for="email">Ingresa tu email</label>
+            <input type="text" id="email" name="email" placeholder="Ingresa tu email">
+        </p>
+     <button type="submit">Guardar</button>
+  </form>
+  <section class="showName"></section>
+  <section class="showEmail"></section>
+  <button onclick="deleteName()">Borrar registros</button>
+  <script>
+        const form = document.querySelector('form');
+        const inputName = document.querySelector('#name');
+        const inputEmail = document.querySelector('#email')
+        const sectionName = document.querySelector('.showName');
+        const sectionEmail = document.querySelector('.showEmail')
+        showName()
+        showEmail()
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault()
+            localStorage.setItem("name", inputName.value)
+            localStorage.setItem("email", inputEmail.value)
+            showName()
+            showEmail()
+            inputName.value = ''
+            inputEmail.value = ''
+        })
+
+        function showName() {
+            if (localStorage.getItem("name") === '' || localStorage.getItem("name") === null){
+                sectionName.innerHTML = '<p>No hay ningún registro</p>'
+            }
+            else(sectionName.innerHTML = '<p>Nombre: ' + localStorage.getItem("name") + '</p>' )
+        }
+        function showEmail(){
+            if (localStorage.getItem("email") === '' || localStorage.getItem("email") === null){
+                sectionEmail.innerHTML = '<p>No hay ningún registro</p>'
+            }
+            else(sectionEmail.innerHTML = '<p>Email: '+ localStorage.getItem("email")+ '</p>' )
+        }
+
+        function deleteName() {
+            localStorage.clear()
+            showName()
+            showEmail()
+        }
+  </script>
+</body>
+</html>
