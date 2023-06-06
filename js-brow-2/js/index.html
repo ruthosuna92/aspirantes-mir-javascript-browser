@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="main.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header>
+        To Do List - Alejandra Osuna
+    </header>
+      
+    <form id="inputUser">
+    <input type="text" placeholder="Ingresa tu tarea..." autofocus>
+    <input type="submit" value="Add" id="addBtn">
+    </form>
+      
+    <div class="listContainer">
+      <div class="task">   
+      </div>
+      <button onclick="deleteChecked()">Delete All Done</button>
+    </div>
+    <p>
+      Filtrar por:
+      <select name="status">
+       <option value="" disabled selected> Seleccione una opción</option>
+        <option value="completedTasks">Tareas completadas</option>
+        <option value="taskToComplete">Tareas por completar</option>
+        <option value="allTasks">Todas las tareas</option>
+      </select>
+    </p> 
+    <script src="index.js"></script>
+</body>
+</html>

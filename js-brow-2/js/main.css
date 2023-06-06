@@ -1,0 +1,105 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
+  
+  :root{
+    --pink: #EC3272;
+    --lightPink:#FCA5C3;
+    --veryLightPink: #FBC2D6;
+    --gray: #C3B6BB;
+    --white: #FFFFFF
+  }
+  body{
+    background-color: var(--pink);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  form{
+    width: 300px;
+    height: 50px;
+    background-color: var(--lightPink);
+    text-align: center;
+    padding: 10px;
+    margin: 10px auto;
+    box-shadow: 5px 5px 10px black;
+  }
+  form input[type="text"]{
+    padding: 5px;
+    margin-top: 10px;
+    background-color: var(--lightPink);
+    border-style: none;
+    outline: none;
+    color: var(--pink)
+    }
+  
+  form input[type="submit"]{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    color: var(--pink);
+    text-align:center;
+    padding: 1px;
+    font-weight: 600;
+    border-style: none;
+    background-color: var(--veryLightPink);
+  }
+  form input[type="submit"]:hover{
+    background-color: var(--pink);
+    color: var(--veryLightPink);
+    cursor: pointer ;
+  }
+  
+  form input[type="text"]::placeholder{
+    color: var(--gray);
+    text-shadow: 1px 1px 2px black;
+  }
+  .listContainer{
+    width: 280px;
+    background-color: var(--lightPink);
+    padding: 20px;
+    margin: 10px auto;
+    box-shadow: 5px 5px 10px black;
+  }
+  
+  .taskContainer{
+    
+    color: var(--pink);
+    font-weight: 600;
+    
+  }
+  button{
+    border-style: none;
+    background-color: var(--veryLightPink);
+    margin: 10px 90px;
+    padding: 5px;
+    color: var(--pink);
+    text-align: center;  
+    font-weight: 600;
+    border-radius: 20px;
+  }
+  button:hover{
+    background-color: var(--pink);
+    color: var(--veryLightPink);
+    cursor: pointer;
+  }
+  p{
+    text-align: center;
+    color: var(--gray);
+    margin: 30px;
+  }
+  p select{
+    border-style: none;
+    background-color: var(--veryLightPink);
+    color: var(--pink);
+    border-radius: 10px;
+  }
+  
+  header{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    margin: 20px;
+    font-weight: 800;
+    text-shadow: 0.1em 0.1em 0.2em black;
+    font-size: 1.2em;
+  }
